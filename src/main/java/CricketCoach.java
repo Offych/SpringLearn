@@ -1,6 +1,30 @@
+import lombok.Getter;
+
 public class CricketCoach implements Coach {
 
     private FortuneService fortuneService;
+
+    private String team;
+    private String emailAddress;
+
+
+    public void setTeam(String team) {
+        System.out.println("CricketCoach: inside setTeam method - setTeam");
+        this.team = team;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        System.out.println("CricketCoach: inside setEmailAddress method - setEmail");
+        this.emailAddress = emailAddress;
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
 
     public CricketCoach() {
         System.out.println("CricketCoach: inside no-args constructor");
