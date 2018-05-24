@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach {
 
+    @Autowired
     private FortuneService fortuneService;
 
 //      *Constructor injection*
@@ -23,11 +24,11 @@ public class TennisCoach implements Coach {
 //    public void setFortuneService(FortuneService fortuneService) {
 //        this.fortuneService = fortuneService;
 //    }
-    @Autowired
-    public void doSomeCrazyStuff(FortuneService fortuneService) {
-        System.out.println(">>Inside doSomeCrazyStuff method");
-        this.fortuneService = fortuneService;
-    }
+//    @Autowired
+//    public void doSomeCrazyStuff(FortuneService fortuneService) {
+//        System.out.println(">>Inside doSomeCrazyStuff method");
+//        this.fortuneService = fortuneService;
+//    }
 
 
     @Override
