@@ -4,18 +4,33 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 @NoArgsConstructor
 
 @Component
-@Scope("prototype")
 public class TennisCoach implements Coach {
 
     @Autowired
     @Qualifier("randomFortuneService")
     private FortuneService fortuneService;
+
+    //define init method
+    @PostConstruct
+    public void startMethod() {
+        System.out.println("Inside startMethod()");
+    }
+
+    //define destroy method
+    @PreDestroy
+    public void destroyMethod() {
+        System.out.println("Inside destroyMethod()");
+    }
+
+
 
 //      *Constructor injection*
 //    @Autowired
