@@ -3,6 +3,7 @@ package annotationdemo;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @NoArgsConstructor
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 
     @Autowired
+    @Qualifier("randomFortuneService")
     private FortuneService fortuneService;
 
 //      *Constructor injection*
