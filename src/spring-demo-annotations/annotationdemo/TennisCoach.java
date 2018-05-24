@@ -4,6 +4,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Component;
+
 @NoArgsConstructor
 
 @Component
@@ -17,11 +18,17 @@ public class TennisCoach implements Coach {
 //        this.fortuneService = theFortuneService;
 //}
 
-    //define a setter method
+    //    //define a setter method
+//    @Autowired
+//    public void setFortuneService(FortuneService fortuneService) {
+//        this.fortuneService = fortuneService;
+//    }
     @Autowired
-    public void setFortuneService(FortuneService fortuneService) {
+    public void doSomeCrazyStuff(FortuneService fortuneService) {
+        System.out.println(">>Inside doSomeCrazyStuff method");
         this.fortuneService = fortuneService;
     }
+
 
     @Override
     public String getDailyWorkout() {
